@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-      origin: "http://localhost:3000", // Next.js uygulamanızın adresi
+      origin: process.env.CORS_ORIGIN || "http://localhost:3000", // Heroku'da ayarlayacağınız çevresel değişken
       methods: ["GET", "POST"],
       allowedHeaders: ["my-custom-header"],
       credentials: true
@@ -22,8 +22,8 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log('Kullanıcı ayrıldı: ', socket.id);
-  })
-})
+  });
+});
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
