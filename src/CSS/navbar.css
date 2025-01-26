@@ -20,7 +20,7 @@
 
 body{
   @apply
-   text-white
+  text-white font-lotin
   overflow-x-hidden
 }
 
@@ -29,7 +29,7 @@ body{
   w-full h-20
   flex justify-center
   sticky top-0 z-50
-  pointer-events-none select-none
+  select-none
   bg-navbar
 }
 

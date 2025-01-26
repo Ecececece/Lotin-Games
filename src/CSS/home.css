@@ -7,22 +7,22 @@
   src: url('/fonts/lotin.ttf') format('truetype');
 }
 
-.mainScreen{
+.homeMainScreen{
   @apply
   h-full w-mainScreen
-  p-16 bg-black
+   bg-black
   select-none
 }
 
 .homeContent{
   @apply
   flex justify-between items-center
-  text-[54pt] text-center
+  text-[48pt] text-center
 }
 
 .homeIMGScroll{
   @apply
-  h-96 aspect-video
+  h-88 aspect-video
   flex items-center
   relative
 }
@@ -38,7 +38,7 @@
 
 .homeIMG{
   @apply
-  h-96 aspect-video
+  h-88 aspect-video
 }
 
 .homeText{

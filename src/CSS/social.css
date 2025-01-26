@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'lotin';
+  src: url('/fonts/lotin.ttf') format('truetype');
+}
+
+.socialMainScreen{
+  @apply
+  h-mainScreen w-mainScreen
+  flex
+  bg-black
+  select-none
+}
+
+.socialButton{
+  @apply
+  text-center
+  text-white text-[24pt]
+  border-b-2 pt-10 px-4
+}
+
+.messageTextBox{
+  @apply
+  h-20 w-[95%]
+  bg-slate-700
+}
