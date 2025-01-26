@@ -3,6 +3,9 @@ import "../CSS/home.css";
 import "../CSS/social.css";
 import "../CSS/suggestions.css";
 
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -14,14 +17,14 @@ export default function RootLayout({
             <body>
                 <div className="navbar">
                     <div className="navbarCenter">
-                        <a href="/" className="navbarLogo">LOTIN</a>
-                        <div className="navbarButton border-x-2">oyunlar<img src="downArrow.svg" className="navbarArrow right-5" /></div>
-                        <a href="/Social" className="navbarButton">sosyal<img src="downArrow.svg" className="navbarArrow right-6" /></a>
-                        <a href="/Suggestions" className="navbarButton pr-8">önerileriniz<img src="downArrow.svg" className="navbarArrow right-1" /></a>
+                        <Link href="/" className="navbarLogo">LOTIN</Link>
+                        <div className="navbarButton border-x-2">oyunlar<Image src="downArrow.svg" alt="downArrow" className="navbarArrow right-5" /></div>
+                        <Link href="/Social" className="navbarButton">sosyal<Image src="downArrow.svg" alt="downArrow" className="navbarArrow right-6" /></Link>
+                        <Link href="/Suggestions" className="navbarButton pr-8">önerileriniz<Image src="downArrow.svg" alt="downArrow" className="navbarArrow right-1" /></Link>
                     </div>
                     <div className="navbarRight">
                         <div className="navbarLoginButton border-x-2">
-                            <img src="user.svg" className="navbarUser" />
+                            <Image src="user.svg" alt="user" className="navbarUser" />
                             <div className="absolute right-3">giris yap</div>
                         </div>
                     </div>
