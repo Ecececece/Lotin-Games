@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'lotin';
+  src: url('/fonts/lotin.ttf') format('truetype');
+}
+
+:root {
+  --neon-purple: 0 0 5px #C9A8DD, 0 0 10px #C9A8DD, 0 0 20px #C9A8DD;
+}
+
+.neon-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #C9A8DD;
+  text-shadow: var(--neon-purple);
+}
+
+body{
+  @apply
+   text-white
+  overflow-x-hidden
+}
+
+.navbar{
+  @apply
+  w-full h-20
+  flex justify-center
+  sticky top-0 z-50
+  pointer-events-none select-none
+  bg-navbar
+}
+
+.navbarCenter{
+  @apply
+  flex flex-1 justify-center items-center
+}
+
+.navbarLogo{
+  text-shadow: var(--neon-purple);
+
+  @apply
+  h-32 aspect-square
+  flex justify-center items-center
+  mt-12 mr-5 text-[32pt]
+  border-2 rounded-full bg-navbar
+  
+}
+
+.navbarButton{
+  text-shadow: var(--neon-purple);
+
+  @apply
+  h-20 w-60
+  flex justify-center items-end
+  relative
+  text-[24pt] border-r-2
+}
+
+.navbarArrow{
+  filter: drop-shadow(0 0 5px #C9A8DD)
+          drop-shadow(0 0 10px #C9A8DD)
+          drop-shadow(0 0 15px #C9A8DD);
+  @apply
+  h-8 aspect-square
+  absolute bottom-2
+}
+
+.navbarRight{
+  @apply
+  flex justify-end
+  absolute right-0 bottom-0
+}
+
+.navbarLoginButton{
+  text-shadow: var(--neon-purple);
+
+  @apply
+  h-20 w-56
+  flex items-end
+  relative
+  text-[24pt] border-r-2 px-2
+}
+
+.navbarUser{
+  @apply
+  h-14 aspect-square
+  border-2 rounded-full
+}

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'lotin';
+  src: url('/fonts/lotin.ttf') format('truetype');
+}
+
+.mainScreen{
+  @apply
+  h-full w-mainScreen
+  p-16 bg-black
+  select-none
+}
+
+.homeContent{
+  @apply
+  flex justify-between items-center
+  text-[54pt] text-center
+}
+
+.homeIMGScroll{
+  @apply
+  h-96 aspect-video
+  flex items-center
+  relative
+}
+
+.homeArrow{
+  filter: drop-shadow(0 0 5px #C9A8DD)
+          drop-shadow(0 0 10px #C9A8DD)
+          drop-shadow(0 0 15px #C9A8DD);
+  @apply
+  h-10 aspect-square
+  absolute cursor-pointer
+}
+
+.homeIMG{
+  @apply
+  h-96 aspect-video
+}
+
+.homeText{
+  @apply
+  h-full w-full
+  flex flex-col justify-center
+}
